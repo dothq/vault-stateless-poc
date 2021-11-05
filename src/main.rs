@@ -59,7 +59,7 @@ fn main() {
 fn copy_to_clipboard(key: String) {
     let mut ctx: ClipboardContext = ClipboardProvider::new().unwrap();
 
-    ctx.set_contents(key.to_string().to_owned());
+    ctx.set_contents(key.to_string().to_owned()).unwrap();
 
     // We need this because X11
     std::thread::sleep(std::time::Duration::from_millis(1));
