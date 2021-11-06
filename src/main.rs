@@ -31,7 +31,7 @@ fn main() {
     let site_url = &args[1];
     let username = &args[2];
 
-    println!("🔐 Master key: {}\n", password_filter_regex.replace_all(&password, "•"));
+    println!("\n🔐 Master key: {}\n", password_filter_regex.replace_all(&password, "•"));
 
     println!("🧮 Algorithm: SHA-512");
     println!("🌍 Site: {}", site_url);
@@ -64,5 +64,5 @@ fn copy_to_clipboard(key: String) {
     // We need this because X11
     std::thread::sleep(std::time::Duration::from_millis(1));
 
-    println!("\n📋 Copied to clipboard!")
+    println!("\n📋 Copied to clipboard!\n")
 }
